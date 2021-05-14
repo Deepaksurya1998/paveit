@@ -1,0 +1,15 @@
+
+
+#toggle:checked ~ label div.toggle-dot {
+  @apply translate-x-3;
+}
+
+.dark-mode{
+  @apply dark;
+  @apply bg-gray-900;
+}
+
+.light-mode{
+  @apply p-0;
+}
+
