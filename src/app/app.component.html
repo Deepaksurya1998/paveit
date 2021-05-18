@@ -28,10 +28,10 @@
       <h1 class="bg-gray-100 dark:bg-gray-500 dark:text-white">{{items.name}}</h1>
     </div>
     <div class="lg:px-3  dark:bg-gray-500 dark:text-black bg-gray-100">
-      <button class="uppercase font-normal bg-green-400 hover:bg-green-600 hover:text-white p-1 rounded-lg dark:bg-green-300 dark:text-black"  (click)="onSuccess('Backend Server Started')"  [disabled]="StartButton" >Start</button>
+      <button class="uppercase font-normal bg-green-400 hover:bg-green-600 hover:text-white p-1 rounded-lg dark:bg-green-300 dark:text-black"  (click)="start( items.id , items.name+' with ID '+items.id+' is started')"  [disabled]="StartButton" >Start</button>
     </div>
     <div class="lg:px-3  px-2 bg-gray-100 dark:bg-gray-500 dark:text-black">
-      <button class="uppercase font-normal bg-red-400 hover:bg-red-600 hover:text-white p-1 rounded-lg" (click)="onStop('Backend Server stoped')" [disabled]="StopButton">Stop</button>
+      <button class="uppercase font-normal bg-red-400 hover:bg-red-600 hover:text-white p-1 rounded-lg" (click)="stop( items.id ,items.name+' with ID '+items.id+' is stopped')" [disabled]="StopButton">Stop</button>
     </div>
   </div>
   <div class="flex flex-row justify-center items-center text-2xl font-mono p-2 bg-gray-200 dark:bg-gray-800  dark:text-white">{{p.name}}</div>
@@ -41,10 +41,10 @@
       <h1 class="bg-gray-100 dark:bg-gray-500 dark:text-white">{{items.name}}</h1>
     </div>
     <div class="lg:px-3  bg-gray-100 dark:bg-gray-500 dark:text-black">
-      <button class="uppercase font-normal bg-green-400 hover:bg-green-600 hover:text-white p-1 rounded-lg"  (click)="onSuccess('Backend Server Started')"  [disabled]="StartButton">start</button>
+      <button class="uppercase font-normal bg-green-400 hover:bg-green-600 hover:text-white p-1 rounded-lg"  (click)="start( items.id , items.name+' with ID '+items.id+' is started')"  [disabled]="StartButton">start</button>
     </div>
     <div class="lg:px-3  px-2 bg-gray-100 dark:bg-gray-500 dark:text-black">
-      <button class="uppercase font-normal bg-red-400 hover:bg-red-600 hover:text-white p-1 rounded-lg" (click)="onStop('Backend Server stoped')" [disabled]="StopButton">stop</button>
+      <button class="uppercase font-normal bg-red-400 hover:bg-red-600 hover:text-white p-1 rounded-lg" (click)="stop( items.id ,items.name+' with ID '+items.id+' is stopped')" [disabled]="StopButton">stop</button>
     </div>
   </div>
   <div class="flex flex-row justify-center items-center text-2xl p-2 bg-gray-200  dark:bg-gray-800 font-serif dark:text-white pt-5">{{FirstArray.name}} ➝ {{NextgenStack.name}}</div>
@@ -55,10 +55,10 @@
       <h1 class="bg-gray-100 dark:bg-gray-500 dark:text-white">{{items.name}}</h1>
     </div>
     <div class="lg:px-3  dark:bg-gray-500 dark:text-black bg-gray-100">
-      <button class="uppercase font-normal bg-green-400 hover:bg-green-600 hover:text-white p-1 rounded-lg dark:bg-green-300 dark:text-black"  (click)="onSuccess('Backend Server Started')"  [disabled]="StartButton" >Start</button>
+      <button class="uppercase font-normal bg-green-400 hover:bg-green-600 hover:text-white p-1 rounded-lg dark:bg-green-300 dark:text-black"  (click)="start( items.id , items.name+' with ID '+items.id+' is started')"  [disabled]="StartButton" >Start</button>
     </div>
     <div class="lg:px-3  px-2 bg-gray-100 dark:bg-gray-500 dark:text-black">
-      <button class="uppercase font-normal bg-red-400 hover:bg-red-600 hover:text-white p-1 rounded-lg" (click)="onStop('Backend Server stoped')" [disabled]="StopButton">Stop</button>
+      <button class="uppercase font-normal bg-red-400 hover:bg-red-600 hover:text-white p-1 rounded-lg" (click)="stop( items.id ,items.name+' with ID '+items.id+' is stopped')" [disabled]="StopButton">Stop</button>
     </div>
   </div>
   <div class="flex flex-row justify-center items-center text-2xl font-mono p-2 bg-gray-200 dark:bg-gray-800  dark:text-white">{{AdminServer.name}}</div>
@@ -68,10 +68,10 @@
       <h1 class="bg-gray-100 dark:bg-gray-500 dark:text-white">{{items.name}}</h1>
     </div>
     <div class="lg:px-3  dark:bg-gray-500 dark:text-black bg-gray-100">
-      <button class="uppercase font-normal bg-green-400 hover:bg-green-600 hover:text-white p-1 rounded-lg dark:bg-green-300 dark:text-black"  (click)="onSuccess('Backend Server Started')"  [disabled]="StartButton" >Start</button>
+      <button class="uppercase font-normal bg-green-400 hover:bg-green-600 hover:text-white p-1 rounded-lg dark:bg-green-300 dark:text-black"  (click)="start( items.id , items.name+' with ID '+items.id+' is started')"  [disabled]="StartButton" >Start</button>
     </div>
     <div class="lg:px-3  px-2 bg-gray-100 dark:bg-gray-500 dark:text-black">
-      <button class="uppercase font-normal bg-red-400 hover:bg-red-600 hover:text-white p-1 rounded-lg" (click)="onStop('Backend Server stoped')" [disabled]="StopButton">Stop</button>
+      <button class="uppercase font-normal bg-red-400 hover:bg-red-600 hover:text-white p-1 rounded-lg" (click)="stop( items.id ,items.name+' with ID '+items.id+' is stopped')" [disabled]="StopButton">Stop</button>
     </div>
   </div>
 
@@ -88,10 +88,10 @@
       <h1 class="bg-gray-100 dark:bg-gray-500 dark:text-white">{{items.name}}</h1>
     </div>
     <div class="lg:px-3  bg-gray-100 dark:bg-gray-500 dark:text-black">
-      <button class="uppercase font-normal bg-green-400 hover:bg-green-600 hover:text-white p-1 rounded-lg "  (click)="onSuccess('Backend Server Started')"  [disabled]="StartButton" >Start</button>
+      <button class="uppercase font-normal bg-green-400 hover:bg-green-600 hover:text-white p-1 rounded-lg "  (click)="start( items.id , items.name+' with ID '+items.id+' is started')"  [disabled]="" >Start</button>
     </div>
     <div class="lg:px-3  px-2 bg-gray-100 dark:bg-gray-500 dark:text-black">
-      <button class="uppercase font-normal bg-red-400 hover:bg-red-600 hover:text-white p-1 rounded-lg" (click)="onStop('Backend Server stoped')" [disabled]="StopButton">Stop</button>
+      <button class="uppercase font-normal bg-red-400 hover:bg-red-600 hover:text-white p-1 rounded-lg" (click)="stop( items.id ,items.name+' with ID '+items.id+' is stopped')" [disabled]="StopButton">Stop</button>
     </div>
   </div>
 

@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { UserService } from './services/api.service';
 import { NotificationsService} from 'angular2-notifications';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -36,6 +37,7 @@ export class AppComponent implements OnInit{
   NgBeArray: any;
   AdminServer: any;
   AdminArray: any;
+  success123:any;
 
 
   constructor(public user:UserService , public service:NotificationsService ){
@@ -71,8 +73,8 @@ export class AppComponent implements OnInit{
 
 
 
-        console.warn(this.AdminArray);
-        console.warn(this.AdminServer);
+        //console.warn(this.AdminArray);
+        //console.warn(this.AdminServer);
 
 
 
@@ -116,10 +118,66 @@ togglebol(){
 
 // [ngStyle]="{'background-color': (StartButton) ? '#aaddce' : '#44aa8d'}"
 
-  onSuccess(message) {
+start(id:any , message){
 
-   this.StartButton=true;
-   this.StopButton=false;
+
+  console.log(id);
+  this.onSuccess(message);
+
+
+  /*
+  if(id  == 43){
+    let a:boolean=null;
+    let b:boolean=null;
+   this.StartButton=null;
+    this.StopButton=null;
+
+    this.startstate(a,b);
+    this.onSuccess(message);
+  }else if(id  == 44){
+    this.StartButton=null;
+    this.StopButton=null;
+   let a:boolean=null;
+   let b:boolean=null;
+   this.StartButton=null;
+   this.StopButton=null;
+
+   this.startstate(a,b);
+   this.onSuccess(message);
+   }else{
+    this.onSuccess(message);
+  }
+*/
+}
+
+ startstate(a,b){
+
+  a=true;
+  b=false;
+}
+
+stopstate(a,b){
+
+  a=true;
+  b=false;
+}
+
+
+stop(id:any , message){
+
+  console.log(id);
+  this.onStop(message);
+
+}
+
+ onSuccess(message ) {
+
+    //console.log(id);
+       //this.StartButton=true;
+    //this.StopButton=false;
+
+
+
 
     this.service.success('success' ,message, {
       position:['bottom','right'],
@@ -131,9 +189,11 @@ togglebol(){
   }
 
 
+
+
   onStop(message) {
-    this.StartButton=false;
-    this.StopButton=true;
+    //this.StartButton=false;
+    //this.StopButton=true;
     this.service.error('Terminated' ,message, {
       position:['bottom','right'],
       timeOut: 2000,
